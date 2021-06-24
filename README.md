@@ -1,6 +1,6 @@
 <div align="center">
 
-# @sapphire/type
+# @yukikaze-bot/prompt
 
 **A simple prompter for your cli.**
 
