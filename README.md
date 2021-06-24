@@ -39,9 +39,9 @@ yarn add @yukikaze-bot/prompt
 
 ## Usage
 
-**Note:** While this section uses `require`, the imports match 1:1 with ESM imports. For example `const { Type } = require('@yukikaze-bot/prompt')` equals `import { Type } from '@yukikaze-bot/prompt'`.
+**Note:** While this section uses `require`, the imports match 1:1 with ESM imports. For example `const { prompt } = require('@yukikaze-bot/prompt')` equals `import { prompt } from '@yukikaze-bot/prompt'`.
 
-**Note:** When using ESM syntax you can also default-import `Type` class: `import Type from '@yukikaze-bot/prompt'`.
+**Note:** When using ESM syntax you can also default-import `prompt` function: `import prompt from '@yukikaze-bot/prompt'`.
 
 ### Basic Usage
 
