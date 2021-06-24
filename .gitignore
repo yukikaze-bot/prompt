@@ -1,3 +1,15 @@
+# built files
+build
+prebuild
+docs
+
+# yarn v2
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
 # Logs
 logs
 *.log

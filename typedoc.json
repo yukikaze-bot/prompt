@@ -1,0 +1,8 @@
+{
+	"out": "./docs/",
+	"readme": "./README.md",
+	"name": "@yukikaze-bot/prompt",
+	"entryPoints": ["src/index.ts"],
+	"excludeExternals": true,
+	"tsconfig": "tsconfig.json"
+}

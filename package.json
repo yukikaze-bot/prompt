@@ -1,0 +1,79 @@
+{
+	"name": "@yukikaze-bot/prompt",
+	"version": "1.0.0",
+	"description": "A simple cli prompter.",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		"import": "./dist/index.mjs",
+		"require": "./dist/index.js"
+	},
+	"scripts": {
+		"test": "node tests/index",
+		"lint": "eslint . --fix",
+		"docs": "typedoc",
+		"prettier": "prettier . --write",
+		"pre-build": "run-s gyp:configure",
+		"build": "run-p ts:build gyp:build",
+		"post-build": "gen-esm-wrapper dist/index.js dist/index.mjs",
+		"prepublishOnly": "yarn build",
+		"install": "node-pre-gyp install --fallback-to-build",
+		"ts:build": "tsc",
+		"gyp:rebuild": "node-pre-gyp rebuild",
+		"gyp:configure": "node-pre-gyp configure",
+		"gyp:build": "node-pre-gyp build",
+		"gyp:package": "node-pre-gyp package",
+		"gyp:prebuild": "node-pre-gyp configure install build package --fallback-to-build"
+	},
+	"binary": {
+		"module_name": "prompt",
+		"module_path": "./prebuild/{module_name}-{node_abi}-{platform}-{arch}-{libc}-{libc_version}/",
+		"host": "https://github.com/yukikaze-bot/prompt/releases/download/",
+		"remote_path": "v{version}",
+		"package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}-{libc}-{libc_version}.tar.gz",
+		"pkg_path": "."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yukikaze-bot/prompt.git"
+	},
+	"keywords": [
+		"prompt",
+		"cli"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"author": "Yoshida Tomio <https://tomio.codes>",
+	"license": "Apache-2.0",
+	"bugs": {
+		"url": "https://github.com/yukikaze-bot/prompt/issues"
+	},
+	"homepage": "https://github.com/yukikaze-bot/prompt#readme",
+	"dependencies": {
+		"@discordjs/node-pre-gyp": "^0.4.0",
+		"node-addon-api": "^4.0.0"
+	},
+	"devDependencies": {
+		"@sapphire/eslint-config": "^3.2.0",
+		"@sapphire/prettier-config": "^1.1.4",
+		"@sapphire/ts-config": "^2.3.0",
+		"@types/node": "^15.12.4",
+		"eslint": "^7.29.0",
+		"gen-esm-wrapper": "^1.1.2",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^2.3.1",
+		"typedoc": "^0.21.0",
+		"typedoc-plugin-nojekyll": "^1.0.1",
+		"typescript": "^4.3.4"
+	},
+	"files": [
+		"lib",
+		"binding.gyp",
+		"dist",
+		"!dist/.tsbuildinfo"
+	],
+	"gypFile": true,
+	"prettier": "@sapphire/prettier-config"
+}
