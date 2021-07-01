@@ -1,6 +1,6 @@
 {
 	"name": "@yukikaze-bot/prompt",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "A simple cli prompter.",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
