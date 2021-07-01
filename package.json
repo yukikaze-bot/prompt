@@ -1,6 +1,6 @@
 {
 	"name": "@yukikaze-bot/prompt",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"description": "A simple cli prompter.",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
@@ -10,6 +10,7 @@
 		"require": "./dist/index.js"
 	},
 	"scripts": {
+		"artifacts": "napi artifacts",
 		"test": "node tests/index",
 		"lint": "eslint . --fix",
 		"docs": "typedoc",
