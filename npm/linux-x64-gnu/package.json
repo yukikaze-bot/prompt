@@ -1,17 +1,17 @@
 {
-  "name": "@yukikaze-bot/prompt-win32-ia32-msvc",
+  "name": "@yukikaze-bot/prompt-linux-x64-gnu",
   "version": "2.0.3",
   "os": [
-    "win32"
+    "linux"
   ],
   "cpu": [
-    "ia32"
+    "x64"
   ],
-  "main": "prompt.win32-ia32-msvc.node",
+  "main": "prompt.linux-x64-gnu.node",
   "files": [
-    "prompt.win32-ia32-msvc.node"
+    "prompt.linux-x64-gnu.node"
   ],
-  "description": "Windows 32-bit IA 32 bindings.",
+  "description": "Linux x64 bindings.",
   "license": "Apache-2.0",
   "publishConfig": {
     "access": "public"

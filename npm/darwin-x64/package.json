@@ -1,23 +1,23 @@
 {
-	"name": "@yukikaze-bot/prompt-darwin-x64",
-	"version": "2.0.2",
-	"os": [
-		"darwin"
-	],
-	"cpu": [
-		"x64"
-	],
-	"main": "prompt.darwin-x64.node",
-	"files": [
-		"prompt.darwin-x64.node"
-	],
-	"description": "Darwin x64 bindings.",
-	"license": "Apache-2.0",
-	"publishConfig": {
-		"access": "public"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/yukikaze-bot/prompt.git"
-	}
+  "name": "@yukikaze-bot/prompt-darwin-x64",
+  "version": "2.0.3",
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "prompt.darwin-x64.node",
+  "files": [
+    "prompt.darwin-x64.node"
+  ],
+  "description": "Darwin x64 bindings.",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukikaze-bot/prompt.git"
+  }
 }

@@ -1,84 +1,98 @@
 {
-	"name": "@yukikaze-bot/prompt",
-	"version": "2.0.2",
-	"description": "A simple cli prompter.",
-	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.ts",
-	"exports": {
-		"import": "./dist/index.mjs",
-		"require": "./dist/index.js"
-	},
-	"scripts": {
-		"artifacts": "napi artifacts",
-		"test": "node tests/index",
-		"lint": "eslint . --fix",
-		"docs": "typedoc",
-		"prettier": "prettier . --write && cargo fmt",
-		"build": "run-p ts:build rs:build",
-		"post-build": "gen-esm-wrapper dist/index.js dist/index.mjs",
-		"prepublishOnly": "napi prepublish -t npm",
-		"ts:build": "tsc",
-		"rs:build": "napi build --platform --release",
-		"rs:debug": "napi build --platform"
-	},
-	"napi": {
-		"name": "prompt",
-		"triples": {
-			"defaults": true,
-			"additional": [
-				"x86_64-unknown-linux-musl",
-				"aarch64-unknown-linux-gnu",
-				"i686-pc-windows-msvc",
-				"armv7-unknown-linux-gnueabihf",
-				"aarch64-apple-darwin",
-				"aarch64-linux-android",
-				"x86_64-unknown-freebsd",
-				"aarch64-unknown-linux-musl",
-				"aarch64-pc-windows-msvc"
-			]
-		}
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/yukikaze-bot/prompt.git"
-	},
-	"keywords": [
-		"prompt",
-		"cli",
-		"rust"
-	],
-	"publishConfig": {
-		"access": "public"
-	},
-	"author": "Yoshida Tomio <https://tomio.codes>",
-	"license": "Apache-2.0",
-	"bugs": {
-		"url": "https://github.com/yukikaze-bot/prompt/issues"
-	},
-	"homepage": "https://github.com/yukikaze-bot/prompt#readme",
-	"dependencies": {
-		"@napi-rs/cli": "^1.1.0",
-		"@node-rs/helper": "^1.2.0",
-		"node-addon-api": "^4.0.0"
-	},
-	"devDependencies": {
-		"@sapphire/eslint-config": "^3.2.0",
-		"@sapphire/prettier-config": "^1.1.4",
-		"@sapphire/ts-config": "^2.3.0",
-		"@types/node": "^15.12.4",
-		"eslint": "^7.29.0",
-		"gen-esm-wrapper": "^1.1.2",
-		"npm-run-all": "^4.1.5",
-		"prettier": "^2.3.1",
-		"typedoc": "^0.21.0",
-		"typedoc-plugin-nojekyll": "^1.0.1",
-		"typescript": "^4.3.4"
-	},
-	"files": [
-		"lib",
-		"dist",
-		"!dist/.tsbuildinfo"
-	],
-	"prettier": "@sapphire/prettier-config"
+  "name": "@yukikaze-bot/prompt",
+  "version": "2.0.3",
+  "description": "A simple cli prompter.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "test": "node tests/index",
+    "lint": "eslint . --fix",
+    "docs": "typedoc",
+    "prettier": "prettier . --write && cargo fmt",
+    "build": "run-p ts:build rs:build",
+    "post-build": "gen-esm-wrapper dist/index.js dist/index.mjs",
+    "prepublishOnly": "napi prepublish -t npm",
+    "ts:build": "tsc",
+    "rs:build": "napi build --platform --release",
+    "rs:debug": "napi build --platform"
+  },
+  "napi": {
+    "name": "prompt",
+    "triples": {
+      "defaults": true,
+      "additional": [
+        "x86_64-unknown-linux-musl",
+        "aarch64-unknown-linux-gnu",
+        "i686-pc-windows-msvc",
+        "armv7-unknown-linux-gnueabihf",
+        "aarch64-apple-darwin",
+        "aarch64-linux-android",
+        "x86_64-unknown-freebsd",
+        "aarch64-unknown-linux-musl",
+        "aarch64-pc-windows-msvc"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukikaze-bot/prompt.git"
+  },
+  "keywords": [
+    "prompt",
+    "cli",
+    "rust"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Yoshida Tomio <https://tomio.codes>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/yukikaze-bot/prompt/issues"
+  },
+  "homepage": "https://github.com/yukikaze-bot/prompt#readme",
+  "dependencies": {
+    "@napi-rs/cli": "^1.1.0",
+    "@node-rs/helper": "^1.2.0",
+    "node-addon-api": "^4.0.0"
+  },
+  "devDependencies": {
+    "@sapphire/eslint-config": "^3.2.0",
+    "@sapphire/prettier-config": "^1.1.4",
+    "@sapphire/ts-config": "^2.3.0",
+    "@types/node": "^15.12.4",
+    "eslint": "^7.29.0",
+    "gen-esm-wrapper": "^1.1.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.1",
+    "typedoc": "^0.21.0",
+    "typedoc-plugin-nojekyll": "^1.0.1",
+    "typescript": "^4.3.4"
+  },
+  "files": [
+    "lib",
+    "dist",
+    "!dist/.tsbuildinfo"
+  ],
+  "prettier": "@sapphire/prettier-config",
+  "optionalDependencies": {
+    "@yukikaze-bot/prompt-win32-x64-msvc": "^2.0.3",
+    "@yukikaze-bot/prompt-darwin-x64": "^2.0.3",
+    "@yukikaze-bot/prompt-linux-x64-gnu": "^2.0.3",
+    "@yukikaze-bot/prompt-linux-x64-musl": "^2.0.3",
+    "@yukikaze-bot/prompt-linux-arm64-gnu": "^2.0.3",
+    "@yukikaze-bot/prompt-win32-ia32-msvc": "^2.0.3",
+    "@yukikaze-bot/prompt-linux-arm-gnueabihf": "^2.0.3",
+    "@yukikaze-bot/prompt-darwin-arm64": "^2.0.3",
+    "@yukikaze-bot/prompt-android-arm64": "^2.0.3",
+    "@yukikaze-bot/prompt-freebsd-x64": "^2.0.3",
+    "@yukikaze-bot/prompt-linux-arm64-musl": "^2.0.3",
+    "@yukikaze-bot/prompt-win32-arm64-msvc": "^2.0.3"
+  }
 }

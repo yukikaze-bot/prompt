@@ -1,23 +1,23 @@
 {
-	"name": "@yukikaze-bot/prompt-win32-x64-msvc",
-	"version": "2.0.2",
-	"os": [
-		"win32"
-	],
-	"cpu": [
-		"x64"
-	],
-	"main": "prompt.win32-x64-msvc.node",
-	"files": [
-		"prompt.win32-x64-msvc.node"
-	],
-	"description": "Windows 32-bit x64 bindings.",
-	"license": "Apache-2.0",
-	"publishConfig": {
-		"access": "public"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/yukikaze-bot/prompt.git"
-	}
+  "name": "@yukikaze-bot/prompt-win32-x64-msvc",
+  "version": "2.0.3",
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "main": "prompt.win32-x64-msvc.node",
+  "files": [
+    "prompt.win32-x64-msvc.node"
+  ],
+  "description": "Windows 32-bit x64 bindings.",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukikaze-bot/prompt.git"
+  }
 }
