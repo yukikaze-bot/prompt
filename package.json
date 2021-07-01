@@ -1,6 +1,6 @@
 {
   "name": "@yukikaze-bot/prompt",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "A simple cli prompter.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -82,17 +82,17 @@
   ],
   "prettier": "@sapphire/prettier-config",
   "optionalDependencies": {
-    "@yukikaze-bot/prompt-win32-x64-msvc": "^2.0.3",
-    "@yukikaze-bot/prompt-darwin-x64": "^2.0.3",
-    "@yukikaze-bot/prompt-linux-x64-gnu": "^2.0.3",
-    "@yukikaze-bot/prompt-linux-x64-musl": "^2.0.3",
-    "@yukikaze-bot/prompt-linux-arm64-gnu": "^2.0.3",
-    "@yukikaze-bot/prompt-win32-ia32-msvc": "^2.0.3",
-    "@yukikaze-bot/prompt-linux-arm-gnueabihf": "^2.0.3",
-    "@yukikaze-bot/prompt-darwin-arm64": "^2.0.3",
-    "@yukikaze-bot/prompt-android-arm64": "^2.0.3",
-    "@yukikaze-bot/prompt-freebsd-x64": "^2.0.3",
-    "@yukikaze-bot/prompt-linux-arm64-musl": "^2.0.3",
-    "@yukikaze-bot/prompt-win32-arm64-msvc": "^2.0.3"
+    "@yukikaze-bot/prompt-win32-x64-msvc": "^2.0.4",
+    "@yukikaze-bot/prompt-darwin-x64": "^2.0.4",
+    "@yukikaze-bot/prompt-linux-x64-gnu": "^2.0.4",
+    "@yukikaze-bot/prompt-linux-x64-musl": "^2.0.4",
+    "@yukikaze-bot/prompt-linux-arm64-gnu": "^2.0.4",
+    "@yukikaze-bot/prompt-win32-ia32-msvc": "^2.0.4",
+    "@yukikaze-bot/prompt-linux-arm-gnueabihf": "^2.0.4",
+    "@yukikaze-bot/prompt-darwin-arm64": "^2.0.4",
+    "@yukikaze-bot/prompt-android-arm64": "^2.0.4",
+    "@yukikaze-bot/prompt-freebsd-x64": "^2.0.4",
+    "@yukikaze-bot/prompt-linux-arm64-musl": "^2.0.4",
+    "@yukikaze-bot/prompt-win32-arm64-msvc": "^2.0.4"
   }
 }
