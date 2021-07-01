@@ -2,6 +2,8 @@
 build
 prebuild
 docs
+target
+*.node
 
 # yarn v2
 .yarn/*

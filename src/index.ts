@@ -1,16 +1,21 @@
-import { find } from '@discordjs/node-pre-gyp';
-import { resolve, join } from 'path';
+import { loadBinding } from '@node-rs/helper';
+import { join } from 'path';
 
-const bindingPath = find(resolve(join(__dirname, '..', './package.json')));
+const home = join(__dirname, '..');
+const { prompt: prompter } = loadBinding(home, 'prompt', '@yukikaze-bot/prompt');
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { prompt: prompter } = require(bindingPath);
+export interface PromptOptions {
+	char?: string;
+	hide?: boolean;
+}
 
 /**
  * Prompts a message.
  * @since 1.0.0
  * @param {string} message The message.
- * @param {string} [char='>'] The character.
+ * @param {Object} [options] The prompt options.
+ * @param {string} [options.char='>'] The character.
+ * @param {boolean} [options.hide=false] If to hide the user input.
  * @returns {string} The response.
  * @example ```js
  * const { prompt } = require('@yukikaze-bot/prompt');
@@ -19,8 +24,11 @@ const { prompt: prompter } = require(bindingPath);
  * console.log(`Your name is: ${response}`);
  * ```
  */
-export const prompt = (message: string, char = '>'): string => {
-	const response = prompter(`${message}\n${char} `);
+export const prompt = (message: string, options?: PromptOptions): string => {
+	const char = options?.char ?? '>';
+	const hide = options?.hide ?? false;
+	const response = prompter(`${message}\n${char} `, hide);
 
+	console.log('\n');
 	return response as string;
 };

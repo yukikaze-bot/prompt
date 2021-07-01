@@ -1,6 +1,6 @@
 {
 	"name": "@yukikaze-bot/prompt",
-	"version": "1.0.2",
+	"version": "2.0.0",
 	"description": "A simple cli prompter.",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
@@ -13,26 +13,30 @@
 		"test": "node tests/index",
 		"lint": "eslint . --fix",
 		"docs": "typedoc",
-		"prettier": "prettier . --write",
-		"pre-build": "run-s gyp:configure",
-		"build": "run-p ts:build gyp:build",
+		"prettier": "prettier . --write && cargo fmt",
+		"build": "run-p ts:build rs:build",
 		"post-build": "gen-esm-wrapper dist/index.js dist/index.mjs",
-		"prepublishOnly": "yarn build",
-		"install": "node-pre-gyp install --fallback-to-build",
+		"prepublishOnly": "napi prepublish -t npm",
 		"ts:build": "tsc",
-		"gyp:rebuild": "node-pre-gyp rebuild",
-		"gyp:configure": "node-pre-gyp configure",
-		"gyp:build": "node-pre-gyp build",
-		"gyp:package": "node-pre-gyp package",
-		"gyp:prebuild": "node-pre-gyp configure install build package --fallback-to-build"
+		"rs:build": "napi build --platform --release",
+		"rs:debug": "napi build --platform"
 	},
-	"binary": {
-		"module_name": "prompt",
-		"module_path": "./prebuild/{module_name}-{node_abi}-{platform}-{arch}-{libc}-{libc_version}/",
-		"host": "https://github.com/yukikaze-bot/prompt/releases/download/",
-		"remote_path": "v{version}",
-		"package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}-{libc}-{libc_version}.tar.gz",
-		"pkg_path": "."
+	"napi": {
+		"name": "prompt",
+		"triples": {
+			"defaults": true,
+			"additional": [
+				"x86_64-unknown-linux-musl",
+				"aarch64-unknown-linux-gnu",
+				"i686-pc-windows-msvc",
+				"armv7-unknown-linux-gnueabihf",
+				"aarch64-apple-darwin",
+				"aarch64-linux-android",
+				"x86_64-unknown-freebsd",
+				"aarch64-unknown-linux-musl",
+				"aarch64-pc-windows-msvc"
+			]
+		}
 	},
 	"repository": {
 		"type": "git",
@@ -40,7 +44,8 @@
 	},
 	"keywords": [
 		"prompt",
-		"cli"
+		"cli",
+		"rust"
 	],
 	"publishConfig": {
 		"access": "public"
@@ -52,7 +57,8 @@
 	},
 	"homepage": "https://github.com/yukikaze-bot/prompt#readme",
 	"dependencies": {
-		"@discordjs/node-pre-gyp": "^0.4.0",
+		"@napi-rs/cli": "^1.1.0",
+		"@node-rs/helper": "^1.2.0",
 		"node-addon-api": "^4.0.0"
 	},
 	"devDependencies": {
@@ -70,10 +76,8 @@
 	},
 	"files": [
 		"lib",
-		"binding.gyp",
 		"dist",
 		"!dist/.tsbuildinfo"
 	],
-	"gypFile": true,
 	"prettier": "@sapphire/prettier-config"
 }
