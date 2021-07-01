@@ -21,7 +21,7 @@
     "ts:build": "tsc",
     "rs:build": "napi build --platform --release",
     "rs:debug": "napi build --platform",
-	"version": "napi version"
+    "version": "napi version"
   },
   "napi": {
     "name": "prompt",
@@ -60,8 +60,7 @@
   "homepage": "https://github.com/yukikaze-bot/prompt#readme",
   "dependencies": {
     "@napi-rs/cli": "^1.1.0",
-    "@node-rs/helper": "^1.2.0",
-    "node-addon-api": "^4.0.0"
+    "@node-rs/helper": "^1.2.0"
   },
   "devDependencies": {
     "@sapphire/eslint-config": "^3.2.0",
@@ -81,19 +80,5 @@
     "dist",
     "!dist/.tsbuildinfo"
   ],
-  "prettier": "@sapphire/prettier-config",
-  "optionalDependencies": {
-    "@yukikaze-bot/prompt-win32-x64-msvc": "^2.0.4",
-    "@yukikaze-bot/prompt-darwin-x64": "^2.0.4",
-    "@yukikaze-bot/prompt-linux-x64-gnu": "^2.0.4",
-    "@yukikaze-bot/prompt-linux-x64-musl": "^2.0.4",
-    "@yukikaze-bot/prompt-linux-arm64-gnu": "^2.0.4",
-    "@yukikaze-bot/prompt-win32-ia32-msvc": "^2.0.4",
-    "@yukikaze-bot/prompt-linux-arm-gnueabihf": "^2.0.4",
-    "@yukikaze-bot/prompt-darwin-arm64": "^2.0.4",
-    "@yukikaze-bot/prompt-android-arm64": "^2.0.4",
-    "@yukikaze-bot/prompt-freebsd-x64": "^2.0.4",
-    "@yukikaze-bot/prompt-linux-arm64-musl": "^2.0.4",
-    "@yukikaze-bot/prompt-win32-arm64-msvc": "^2.0.4"
-  }
+  "prettier": "@sapphire/prettier-config"
 }
