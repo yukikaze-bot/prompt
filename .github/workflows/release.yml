@@ -439,7 +439,7 @@ jobs:
         run: yarn
 
       - name: Build typescript files
-        run: yarn ts:build
+        run: yarn rs:debug && yarn ts:build
 
       - name: Download all artifacts
         uses: actions/download-artifact@v2
