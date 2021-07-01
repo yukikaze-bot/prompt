@@ -20,7 +20,8 @@
     "prepublishOnly": "napi prepublish -t npm",
     "ts:build": "tsc",
     "rs:build": "napi build --platform --release",
-    "rs:debug": "napi build --platform"
+    "rs:debug": "napi build --platform",
+	"version": "napi version"
   },
   "napi": {
     "name": "prompt",
