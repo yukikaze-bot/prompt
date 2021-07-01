@@ -450,6 +450,12 @@ jobs:
         run: ls -R ./npm
         shell: bash
 
+      - name: Pre publish
+        run: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Publish
         uses: JS-DevTools/npm-publish@v1
         with:

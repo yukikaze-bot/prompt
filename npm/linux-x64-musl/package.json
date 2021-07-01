@@ -1,6 +1,6 @@
 {
   "name": "@yukikaze-bot/prompt-linux-x64-musl",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "os": [
     "linux"
   ],
